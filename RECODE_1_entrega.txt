@@ -1,0 +1,69 @@
+Algoritmo "RECODE 1 Entrega"
+
+Var
+
+   clientes : vetor[0..2, 0..7] de caracter
+   destinos : vetor[0..2, 0..7] de caracter
+   opcao0, opcao1, opcao2, i, j : inteiro
+
+Inicio
+
+      escreval("Bem vindo ao sistema de Cadastros e Consultas")
+      escreval("Para Cadastro digite 1. Para Consulta digite 2")
+      leia(opcao0)
+      se opcao0=1 entao
+         escreval("Para Cliente digite 1. Para Destino digite 2")
+         leia(opcao1)
+              se opcao1=1 entao
+                 escreval("Vamos cadastrar o cliente")
+                 escreval("Digite os dados do cliente: ")
+                 escreval("Nome, Sobrenome, CPF, Endereço, Cidade, Estado, telefone, e-mail")
+                 para i de 0 ate 2 faca
+                 escreval("Cliente:", i+1)
+                 para j de 0 ate 7 faca
+                 leia(clientes[i,j])
+                 fimpara
+                 escreval()
+                 fimpara
+                 escreval("Fim dos dados")
+                 limpatela
+                 escreval("Dados digitados")
+                 para i de 0 ate 2 faca
+                 para j de 0 ate 7 faca
+                 escreval(clientes[i,j])
+                 fimpara
+                 escreval()
+              se opcao1=2 entao
+                 escreval("Vamos cadastrar o destino")
+                 escreval("Digite os dados de destinos: ")
+                 escreval("Hotel, Endereço, Cidade, Contato")
+                 para i de 0 ate 2 faca
+                 escreval("Destino:", i+1)
+                 para j de 0 ate 3 faca
+                 leia(clientes[i,j])
+                 fimpara
+                 escreval()
+                 fimpara
+                 escreval("Fim dos dados")
+                 limpatela
+                 escreval("Dados digitados")
+                 para i de 0 ate 2 faca
+                 para j de 0 ate 3 faca
+                 escreval(Destinos[i,j])
+                 fimpara
+                 escreval()
+              senao
+                 escreval("Escolha uma das Opções acima!)
+              fimpara
+      se opcao0=2 entao
+         escreval("Para consulta de cliente digite 1. Para destinos 2")
+              se opcao2=1 entao
+              escreval("Esses são os clientes cadstrados")
+              escreval(clientes)
+              se opcao2=1 entao
+              escreval("Esses são os destinos cadstrados")
+              escreval(destinos)
+              senao
+                 escreval("Escolha uma das Opções acima!)
+              fimpara
+Fimalgoritmo
